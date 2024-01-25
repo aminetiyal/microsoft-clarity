@@ -2,9 +2,9 @@
 
 namespace AmineTiyal\MicrosoftClarity;
 
+use Illuminate\Support\Facades\Blade;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use AmineTiyal\MicrosoftClarity\Commands\MicrosoftClarityCommand;
 
 class MicrosoftClarityServiceProvider extends PackageServiceProvider
 {
@@ -18,8 +18,15 @@ class MicrosoftClarityServiceProvider extends PackageServiceProvider
         $package
             ->name('microsoft-clarity')
             ->hasConfigFile()
-            ->hasViews()
-            ->hasMigration('create_microsoft-clarity_table')
-            ->hasCommand(MicrosoftClarityCommand::class);
+            ->hasViews();
+    }
+
+    public function boot()
+    {
+        parent::boot();
+
+        Blade::directive('clarityScripts', function () {
+            return "<?php echo view('microsoft-clarity::scripts'); ?>";
+        });
     }
 }
