@@ -2,9 +2,9 @@
 
 namespace AmineTiyal\MicrosoftClarity\Tests;
 
+use AmineTiyal\MicrosoftClarity\MicrosoftClarityServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use AmineTiyal\MicrosoftClarity\MicrosoftClarityServiceProvider;
 
 class TestCase extends Orchestra
 {
