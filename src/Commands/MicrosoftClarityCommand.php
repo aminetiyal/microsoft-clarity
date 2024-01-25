@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace AmineTiyal\MicrosoftClarity\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class MicrosoftClarityCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'microsoft-clarity';
 
     public $description = 'My command';
 
