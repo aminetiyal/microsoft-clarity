@@ -1,4 +1,4 @@
-@if(config('microsoft-clarity.site_id'))
+@if(config('microsoft-clarity.microsoft_clarity_site_id'))
     <script type="text/javascript">
         (function (c, l, a, r, i, t, y) {
             c[a] = c[a] || function () {
@@ -9,6 +9,6 @@
             t.src = "https://www.clarity.ms/tag/" + i;
             y = l.getElementsByTagName(r)[0];
             y.parentNode.insertBefore(t, y);
-        })(window, document, "clarity", "script", "{{config('microsoft-clarity.site_id')}}");
+        })(window, document, "clarity", "script", "{{config('microsoft-clarity.microsoft_clarity_site_id')}}");
     </script>
 @endif

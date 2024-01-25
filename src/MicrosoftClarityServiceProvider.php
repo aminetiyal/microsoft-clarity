@@ -26,7 +26,11 @@ class MicrosoftClarityServiceProvider extends PackageServiceProvider
         parent::boot();
 
         Blade::directive('clarityScripts', function () {
-            return "<?php echo view('microsoft-clarity::scripts'); ?>";
+            return "<?php echo view('microsoft-clarity::scripts.clarity'); ?>";
+        });
+
+        Blade::directive('gtagScripts', function () {
+            return "<?php echo view('microsoft-clarity::scripts.gtag'); ?>";
         });
     }
 }
