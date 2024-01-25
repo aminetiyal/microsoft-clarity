@@ -9,6 +9,6 @@
             t.src = "https://www.clarity.ms/tag/" + i;
             y = l.getElementsByTagName(r)[0];
             y.parentNode.insertBefore(t, y);
-        })(window, document, "clarity", "script", {{config('microsoft-clarity.site_id')}});
+        })(window, document, "clarity", "script", "{{config('microsoft-clarity.site_id')}}");
     </script>
 @endif
